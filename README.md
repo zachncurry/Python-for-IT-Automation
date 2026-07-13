@@ -1,12 +1,13 @@
 # Python-for-IT-Automation
 
 
-**Overview & Key Outcomes**</br>
-Act as a company's network administrator during a cybersecurity incident to resolve and add countermeasures.</br>
-Integrates Python scripts, modules, packages, and libraries to automate networking tasks and processes.
+
 
 **Introduction**</br>
 Act as a company's network administrator during a cybersecurity incident in which the internal Domain Name System (DNS) service is down and devices are resolving through a rogue DNS address. Your mission is to quickly identify the root cause, verify and correct configurations on impacted devices, and implement enduring safeguards to prevent recurrence. You will manage a GitLab-based project with working branches, develop Python scripts to enumerate devices, verify connectivity and DNS settings, automatically notify stakeholders, create remediation tickets, and restore the DNS service while ensuring all affected devices are properly reconfigured.
+
+**Key Outcome**</br>
+Integrate Python scripts, modules, packages, and libraries to automate networking tasks and processes.
 
 ## Part One
 **Scenario**</br>
