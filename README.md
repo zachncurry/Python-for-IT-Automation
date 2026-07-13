@@ -5,10 +5,10 @@
 Act as a company's network administrator during a cybersecurity incident to resolve and add countermeasures.</br>
 Integrates Python scripts, modules, packages, and libraries to automate networking tasks and processes.
 
-## Part One
 **Introduction**</br>
 Act as a company's network administrator during a cybersecurity incident in which the internal Domain Name System (DNS) service is down and devices are resolving through a rogue DNS address. Your mission is to quickly identify the root cause, verify and correct configurations on impacted devices, and implement enduring safeguards to prevent recurrence. You will manage a GitLab-based project with working branches, develop Python scripts to enumerate devices, verify connectivity and DNS settings, automatically notify stakeholders, create remediation tickets, and restore the DNS service while ensuring all affected devices are properly reconfigured.
 
+## Part One
 **Scenario**</br>
 As the network administrator for your company, you are alerted to a cybersecurity incident involving a DNS service outage. The internal DNS service is currently down, and you discover that several network devices have been reconfigured to use an unauthorized, potentially malicious DNS address. Immediate action is required to restore proper DNS functionality and secure the network.
 
