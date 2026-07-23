@@ -25,7 +25,7 @@ After resolving the immediate DNS service outage and restoring correct DNS confi
 To ensure ongoing network security and reliability, you must design and implement a solution that regularly monitors DNS configurations and device status across the network. This solution should automatically alert stakeholders if any anomalies or unauthorized changes are detected, helping prevent future DNS-related attacks or outages.
 
 
-#Solution Overview
+# Solution Overview
 
 Libraries Utilited: 
 - Python Socket
