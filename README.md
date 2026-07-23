@@ -30,3 +30,9 @@ To ensure ongoing network security and reliability, you must design and implemen
 Libraries Utilited: 
 - Python Socket
 - Napalm
+- CSV
+- Tabulate
+
+
+Architecture Choices:
+- Chose to utilize the provided CSV instead of first querying the entire network to discover ALL devices which would be best practice in a real network to minimize the scope of this deliverable.
