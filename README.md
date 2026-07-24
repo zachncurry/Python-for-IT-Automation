@@ -51,6 +51,9 @@ To ensure ongoing network security and reliability, you must design and implemen
     - Send Resolution Email 
 - Identify what data is required for each step such as Device Name, IP Address, SubNet, Username, Password, etc
 - Identify what to show in the Terminal and how either line by line or table summary
+- Develop a unit test for each required action
+- Expand the unit test to include all devices listed in the CSV
+- Incorporate the multiple, modular functions into a singular, unified script to complete the end-to-end Initiation, Analysis, and Remediation process that could be setup to run on a chosen schedule automatically.
 
 **Architecture Choices:**
 - Chose to utilize the provided CSV instead of first querying the entire network to discover ALL devices which would be best practice in a real network to minimize the scope of this deliverable.
