@@ -20,11 +20,11 @@ Here are the results of our csvDNS.py file:
 
 **Required Remediation Steps**</br>
 1) Analyze each device for any DNS noncompliance
-2) Send an Alert Email to distribution list
+2) Send an Alert Email to distribution list to include table summary
 3) Create a Help Desk Ticket for each noncompliant device
 4) Restart all DNS servers
-5) Connect and correct each noncompliant device on the network ensuing only policy approved DNS Servers are listed/configured
-6) Send a Resolution Email to distribution list
+5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured
+6) Send a Resolution Email to distribution list to include table summary
 
 ## Part One
 **Scenario**</br>
