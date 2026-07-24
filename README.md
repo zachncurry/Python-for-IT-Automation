@@ -80,11 +80,7 @@ To ensure ongoing network security and reliability, you must design and implemen
 **Formal Work Break Down Structure (It's the PMP in Me!)</br>**
 _There are specialty tools out there to do this but you can use a simple tool such as Powerpoint and it's organizational chart feature to list out each action to be completed, then identify what steps need to be taken to accomplish each action, then identify the key data points required. This will help you map out process/ order of operations as well as communication/ 3rd party integrations even before moving to sudo code. While this is mostly associated with Waterfall development this can be done for features within an agile framework helping to address complexity, cross-functional collaboration, and even client management/sign-off._
 <img width="1347" height="521" alt="image" src="https://github.com/user-attachments/assets/55f09be2-d6d1-4f5a-b500-9c38e6cd0e03" />
-<img width="344" height="667" alt="image" src="https://github.com/user-attachments/assets/1d57cfd9-eb28-42db-aa03-2004f6e97f5f" />
-
-
-
-
+<img width="390" height="677" alt="image" src="https://github.com/user-attachments/assets/cdd249f6-2df0-4a27-a348-efe97a95d707" />
 
 
 
