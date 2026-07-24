@@ -18,7 +18,13 @@ Here are the results of our csvDNS.py file:
 <img width="1245" height="322" alt="image" src="https://github.com/user-attachments/assets/9e5c51ee-26dc-402c-8626-fd991c0844be" />
 <img width="1245" height="600" alt="image" src="https://github.com/user-attachments/assets/979f21a5-9b48-4859-ae8a-ad88f23ff785" />
 
-
+**Required Remediation Steps**</br>
+1) Analyze each device for any DNS noncompliance
+2) Send an Alert Email to distribution list
+3) Create a Help Desk Ticket for each noncompliant device
+4) Restart all DNS servers
+5) Connect and correct each noncompliant device on the network ensuing only policy approved DNS Servers are listed/configured
+6) Send a Resolution Email to distribution list
 
 ## Part One
 **Scenario**</br>
