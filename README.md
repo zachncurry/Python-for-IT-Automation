@@ -44,11 +44,16 @@ To ensure ongoing network security and reliability, you must design and implemen
 
 # Solution Overview
 
-**Libraries Utilited:**
-- Python Socket
-- Napalm
+**Libraries Utilized:**
 - CSV
 - Tabulate
+- Requests
+- Platform
+- re
+- Subprocess
+- Telnetlib (Selected for ease of use on GNS3)
+- Datetime
+- Napalm
 
 **Strategy:**
 - Create a unit test for each action such as Ping, Get DNS Config, etc then add a loop to try all devices in the CSV.
