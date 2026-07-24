@@ -42,7 +42,7 @@ To ensure ongoing network security and reliability, you must design and implemen
   - Ping Each Device
   - Query DNS Config Settings
   - Compare DNS Config to Expected DNS Config (DNS1 Server @ 10.10.10.10 or DNS2 Server @ 10.10.10.20)
-  - Create Alert/ Trigger to initiate Remediation
+  - Create Alert/ Trigger to Initiate Remediation
     - Create Work Ticket with API Call
     - Send Email Warning Notification
     - Restart DNS Servers
