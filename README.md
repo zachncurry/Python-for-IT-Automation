@@ -42,21 +42,17 @@ After resolving the immediate DNS service outage and restoring correct DNS confi
 To ensure ongoing network security and reliability, you must design and implement a solution that regularly monitors DNS configurations and device status across the network. This solution should automatically alert stakeholders if any anomalies or unauthorized changes are detected, helping prevent future DNS-related attacks or outages.
 
 
-# Solution Overview
-
-**Libraries Utilized:**
-- CSV
-- Tabulate
-- Requests
-- Platform
-- re
-- Subprocess
-- Telnetlib
-- Datetime
-- Napalm
+# Process Overview
 
 **Strategy:**
-- Create a unit test for each action such as Ping, Get DNS Config, etc then add a loop to try all devices in the CSV.
+- Create a plan using established Project Management Book of Knowledge and Systems Engineering best practices
+- Keep development/ test cycles small to reduce the complexity of errors
+
+**Architecture Choices:**
+- Leverage GitHub as my single source of truth for documentation.
+- This lab provides a CSV with network devices. Approaching this as though the CSV was generated upstream for our use and not writing code to discover devices/nodes on the network.
+- Create unit tests for each action such as Ping, Get DNS Config, etc then add a loop to try all devices in the CSV working to keep dev/test cycles as small as possible.
+
 
 **Tactical Approach/ Systems Thinking/ Work Break Down Structure**
 - Outline each required action
@@ -82,8 +78,23 @@ _There are specialty tools out there to do this but you can use a simple tool su
 <img width="1347" height="521" alt="image" src="https://github.com/user-attachments/assets/55f09be2-d6d1-4f5a-b500-9c38e6cd0e03" />
 <img width="390" height="677" alt="image" src="https://github.com/user-attachments/assets/cdd249f6-2df0-4a27-a348-efe97a95d707" />
 
+**Libraries Utilized:**
+- CSV
+- Tabulate
+- Requests
+- Platform
+- re
+- Subprocess
+- Telnetlib
+- Datetime
+- Napalm
 
 
+**Code Development Cycles**
+1) unitReadCSV.py
+2) unitPing.py
+3) csvPing.py
+4) unitDNS.py
+5) csvDNS.py
 
-**Architecture Choices:**
-- This lab provides a CSV with network devices. Approaching this as though the CSV was generated upstream for our use and not writing code to discover devices/nodes on the network.
+   
