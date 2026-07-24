@@ -105,3 +105,24 @@ Here are the terminal results of the csvDNS.py file:
 6) Send a Resolution Email to distribution list to include table summary
 
 
+
+
+# Next Steps</br>
+
+Take this fun, sudo code and turn it into a functional solution starting with the compare function.</br>
+
+FOR each row in csvDNS.py{Summary Table}</br>
+ Compare summary table in csvDNS.py{parse.DNSConfig} to DNS Policy</br>
+  IF: </br>
+   DNS Policy violated append.dnsViolationSummary</br>
+   Call _Email Everybody Function_ (SMTP API)</br>
+   Call _CYA Ticket System_ (Help Desk API)</br>
+   Update Resume 🤣🤣</br>
+  ELSE: </br>
+   Print(DNS policy is giving compliance) _IYKYK_</br>
+
+
+
+ 
+
+
