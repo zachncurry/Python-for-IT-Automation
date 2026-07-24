@@ -6,25 +6,8 @@
 **Introduction**</br>
 Act as a company's network administrator during a cybersecurity incident in which the internal Domain Name System (DNS) service is down and devices are resolving through a rogue DNS address. Your mission is to quickly identify the root cause, verify and correct configurations on impacted devices, and implement enduring safeguards to prevent recurrence. You will manage a GitLab-based project with working branches, develop Python scripts to enumerate devices, verify connectivity and DNS settings, automatically notify stakeholders, create remediation tickets, and restore the DNS service while ensuring all affected devices are properly reconfigured.
 
-**Key Outcome**</br>
+**Key Outcomes**</br>
 - Integrate Python scripts, modules, packages, and libraries to automate networking tasks and processes.
-
-**Initial Results**</br>
-After initializing the network on GSN3, pinging the devices, and obtaining their DNS Configuration records issues have been found.</br>
-Our network is configured to use two DNS Servers located at 10.10.10.10 and 10.10.10.20 however an invalid DNS Server of 203.0.113.10 has been discovered.</br> 
-_127.0.0.53 is a loopback address common in networking_</br>
-_203.0.113.10 is a research allocated IP4 address representing a malicious IP address_</br>
-Here are the terminal results of the csvDNS.py file:
-<img width="1245" height="322" alt="image" src="https://github.com/user-attachments/assets/9e5c51ee-26dc-402c-8626-fd991c0844be" />
-<img width="1245" height="600" alt="image" src="https://github.com/user-attachments/assets/979f21a5-9b48-4859-ae8a-ad88f23ff785" />
-
-**Required Remediation Steps**</br>
-1) Analyze each device for any DNS noncompliance
-2) Send an Alert Email to distribution list to include table summary
-3) Create a Help Desk Ticket for each noncompliant device
-4) Restart all DNS servers
-5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured
-6) Send a Resolution Email to distribution list to include table summary
 
 ## Part One
 **Scenario**</br>
@@ -87,14 +70,32 @@ _There are specialty tools out there to do this but you can use a simple tool su
 - Subprocess
 - Telnetlib
 - Datetime
-- Napalm
 
 
-**Code Development Cycles**
+**Code Development Progress**
 1) unitReadCSV.py
 2) unitPing.py
 3) csvPing.py
 4) unitDNS.py
 5) csvDNS.py
 
-   
+ </br></br>  
+
+## Initial Results</br>
+After initializing the network on GSN3, pinging the devices, and obtaining their DNS Configuration records issues have been found.</br>
+Our network is configured to use two DNS Servers located at 10.10.10.10 and 10.10.10.20 however an invalid DNS Server of 203.0.113.10 has been discovered.</br> 
+_127.0.0.53 is a loopback address common in networking_</br>
+_203.0.113.10 is a research allocated IP4 address representing a malicious IP address_</br>
+Here are the terminal results of the csvDNS.py file:
+<img width="1245" height="322" alt="image" src="https://github.com/user-attachments/assets/9e5c51ee-26dc-402c-8626-fd991c0844be" />
+<img width="1245" height="600" alt="image" src="https://github.com/user-attachments/assets/979f21a5-9b48-4859-ae8a-ad88f23ff785" />
+
+**Required Remediation Steps**</br>
+1) Analyze each device for any DNS noncompliance
+2) Send an Alert Email to distribution list to include table summary
+3) Create a Help Desk Ticket for each noncompliant device
+4) Restart all DNS servers
+5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured
+6) Send a Resolution Email to distribution list to include table summary
+
+
