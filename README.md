@@ -43,12 +43,12 @@ To ensure ongoing network security and reliability, you must design and implemen
  - Query DNS Config Settings
  - Compare DNS Config to Expected DNS Config (DNS1 Server @ 10.10.10.10 or DNS2 Server @ 10.10.10.20)
  - Create Alert/ Trigger to initiate Remediation
-  - Create Work Ticket with API Call
-  - Send Email Warning Notification
-  - Restart DNS Servers
-  - Update DNS Configs in Impacted Devices
-  - Connect to each Impacted Device and Ensure Config Changes are accurate
-  - Send Resolution Email 
+   - Create Work Ticket with API Call
+   - Send Email Warning Notification
+   - Restart DNS Servers
+   - Update DNS Configs in Impacted Devices
+   - Connect to each Impacted Device and Ensure Config Changes are accurate
+   - Send Resolution Email 
 
 - Identify what data is required for each step such as Device Name, IP Address, SubNet, Username, Password, etc
 
