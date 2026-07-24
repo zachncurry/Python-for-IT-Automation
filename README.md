@@ -51,7 +51,7 @@ To ensure ongoing network security and reliability, you must design and implemen
 - Platform
 - re
 - Subprocess
-- Telnetlib (Selected for ease of use on GNS3)
+- Telnetlib
 - Datetime
 - Napalm
 
