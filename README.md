@@ -14,7 +14,7 @@ After initializing the network on GSN3, pinging the devices, and obtaining their
 Our network is configured to use two DNS Servers located at 10.10.10.10 and 10.10.10.20 however an invalid DNS Server of 203.0.113.10 has been discovered.</br> 
 _127.0.0.53 is a loopback address common in networking_</br>
 _203.0.113.10 is a research allocated IP4 address representing a malicious IP address_</br>
-Here are the results of our csvDNS.py file:
+Here are the results of the csvDNS.py file:
 <img width="1245" height="322" alt="image" src="https://github.com/user-attachments/assets/9e5c51ee-26dc-402c-8626-fd991c0844be" />
 <img width="1245" height="600" alt="image" src="https://github.com/user-attachments/assets/979f21a5-9b48-4859-ae8a-ad88f23ff785" />
 
