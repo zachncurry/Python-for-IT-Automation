@@ -27,11 +27,14 @@ To ensure ongoing network security and reliability, you must design and implemen
 
 # Solution Overview
 
-Libraries Utilited: 
+**Libraries Utilited:**
 - Python Socket
 - Napalm
 - CSV
 - Tabulate
+
+**Strategy:**
+- Create a unit test for each action such as Ping, Get DNS Config, etc then add a loop to try all devices in the CSV.
 
 
 Architecture Choices:
