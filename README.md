@@ -7,7 +7,17 @@
 Act as a company's network administrator during a cybersecurity incident in which the internal Domain Name System (DNS) service is down and devices are resolving through a rogue DNS address. Your mission is to quickly identify the root cause, verify and correct configurations on impacted devices, and implement enduring safeguards to prevent recurrence. You will manage a GitLab-based project with working branches, develop Python scripts to enumerate devices, verify connectivity and DNS settings, automatically notify stakeholders, create remediation tickets, and restore the DNS service while ensuring all affected devices are properly reconfigured.
 
 **Key Outcome**</br>
-Integrate Python scripts, modules, packages, and libraries to automate networking tasks and processes.
+- Integrate Python scripts, modules, packages, and libraries to automate networking tasks and processes.
+
+**Initial Results**
+After initializing the network on GSN3, pinging the devices, and obtaining their DNS Configuration records issues have been found.
+Our network is configured to use two DNS Servers located at 10.10.10.10 and 10.10.10.20 however a DNS Server of 203.0.113.10 has been discovered. (203.0.113.10 is a research allocated IP4 address representing a malicious IP address)
+Here are the results of our csvDNS.py file.
+<img width="1245" height="322" alt="image" src="https://github.com/user-attachments/assets/9e5c51ee-26dc-402c-8626-fd991c0844be" />
+
+<img width="1245" height="600" alt="image" src="https://github.com/user-attachments/assets/979f21a5-9b48-4859-ae8a-ad88f23ff785" />
+
+
 
 ## Part One
 **Scenario**</br>
