@@ -9,6 +9,12 @@ Act as a company's network administrator during a cybersecurity incident in whic
 **Key Outcomes**</br>
 - Integrate Python scripts, modules, packages, and libraries to automate networking tasks and processes.
 
+**Network Diagram**</br>
+_GSN3 Instance_</br>
+<img width="687" height="730" alt="image" src="https://github.com/user-attachments/assets/2284ac39-f290-430c-8a01-8a95079f5250" />
+
+
+
 ## Part One
 **Scenario**</br>
 As the network administrator for your company, you are alerted to a cybersecurity incident involving a DNS service outage. The internal DNS service is currently down, and you discover that several network devices have been reconfigured to use an unauthorized, potentially malicious DNS address. Immediate action is required to restore proper DNS functionality and secure the network.
