@@ -36,6 +36,23 @@ To ensure ongoing network security and reliability, you must design and implemen
 **Strategy:**
 - Create a unit test for each action such as Ping, Get DNS Config, etc then add a loop to try all devices in the CSV.
 
+**Tactical Approach/ Systems Thinking/ Work Break Down Structure**
+- Outline each required action
+ - Read/ Import CSV
+ - Ping Each Device
+ - Query DNS Config Settings
+ - Compare DNS Config to Expected DNS Config (DNS1 Server @ 10.10.10.10 or DNS2 Server @ 10.10.10.20)
+ - Create Alert/ Trigger to initiate Remediation
+  - Create Work Ticket with API Call
+  - Send Email Warning Notification
+  - Restart DNS Servers
+  - Update DNS Configs in Impacted Devices
+  - Connect to each Impacted Device and Ensure Config Changes are accurate
+  - Send Resolution Email 
 
-Architecture Choices:
+- Identify what data is required for each step such as Device Name, IP Address, SubNet, Username, Password, etc
+
+- Identify what to show in the Terminal and how either line by line or table summary
+
+**Architecture Choices:**
 - Chose to utilize the provided CSV instead of first querying the entire network to discover ALL devices which would be best practice in a real network to minimize the scope of this deliverable.
