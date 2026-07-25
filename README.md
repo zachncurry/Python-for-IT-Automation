@@ -76,6 +76,8 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 - Subprocess
 - Telnetlib
 - Datetime
+- EmailMessage
+- smtplib
 
 
 **Code Development Progress**
@@ -84,6 +86,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 3) csvPing.py
 4) unitDNS.py
 5) csvDNS.py
+6) unitEmailAPI.py
 
  </br></br>  
 
