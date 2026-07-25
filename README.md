@@ -126,7 +126,7 @@ FOR each row in csvDNS.py{Summary Table}</br>
 
 
 **Implementation Decision**</br>
-**Decision Point:** Do I add the comparision in the current DNS query logic OR do I take the table output from the DNS file as input to a new table?</br>
+**Decision Point:** What parts of the comparision and remediation efforts should I add into the current DNS query logic OR do I take the table output from the DNS file as input to a new table?</br>
 **Decision Logic:** At first I thought I wanted to incorporate it to simplify the code however, after thinking through this (by writing this section) I now want to seperate them because we will need to recall this DNS query function to ensure our remeditaiton efforts were completed successfully. If we incorporate this downstream logic into the initial DNS query we would have had to add a counter and clear the counter instead of adding an ALERT or SUCCESS return to trigger downstream workflows and we will manage any loop conditions downstream in the remediation logic that ingest the return of ALERT or SUCCESS. In a production environment we may also want to consider an escalation if the remediation efforts failed X times such as additional email, escalated ticket priority, etc.
 
  
