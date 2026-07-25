@@ -81,13 +81,13 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 
 
 **Code Development Progress**
-1) unitReadCSV.py: Confirms the ability to add a CSV file to the file structure within a folder, read, and process the contained data
-2) unitPing.py: Confirms the ability to ping a device with hard coded host information
-3) csvPing.py: Confirms the ability to read device information from a CSV file, ping each device, and return the results of each Ping to a table
-4) unitDNS.py: Confirms the ability to obtain a device DNS configuration settings with hard coded host information
-5) csvDNS.py: Confirms the ability to read device information from a CSV file, ping, and get DNS configuration details, adding the results of each to a table
-6) unitEmailAPI.py: Confirms the ability to connect with the SMTP server and send hard coded email information
-7) csvDNScompare.py: Takes the csvDNS table and evaluates the current DNS configurations to our acceptable DNS configurations
+1) [unitReadCSV.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitReadCSV.py): Confirms the ability to add a CSV file to the file structure within a folder, read, and process the contained data
+2) [unitPing.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitPing.py): Confirms the ability to ping a device with hard coded host information
+3) [csvPing.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvPing.py): Confirms the ability to read device information from a CSV file, ping each device, and return the results of each Ping to a table
+4) [unitDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitDNS.py): Confirms the ability to obtain a device DNS configuration settings with hard coded host information
+5) [csvDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNS.py): Confirms the ability to read device information from a CSV file, ping, and get DNS configuration details, adding the results of each to a table
+6) [unitEmailAPI.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitEmailAPI.py): Confirms the ability to connect with the SMTP server and send hard coded email information
+7) [csvDNScompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNScompare.py): Takes the csvDNS table and evaluates the current DNS configurations to our acceptable DNS configurations
 
  </br></br>  
 
