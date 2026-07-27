@@ -73,11 +73,12 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 - Requests
 - Platform
 - re
-- Subprocess
-- Telnetlib
-- Datetime
-- EmailMessage
-- smtplib
+- Subprocess 
+- Telnetlib 
+- Datetime 
+- EmailMessage 
+- smtplib 
+- pandas 
 
 
 **Code Development Progress**
@@ -89,6 +90,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 6) [unitEmailAPI.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitEmailAPI.py): Confirms the ability to connect with the SMTP server and send hard coded email information
 7) [csvDNScompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNScompare.py): Takes the csvDNS table and evaluates the current DNS configurations to our acceptable DNS configurations
 8) [unitCompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/3bbbbc3f8e35f2829ded44b47bd396f0f9e21619/unitCompare.py): Adds a validation check if any devices have an alert to start the remediation process otherwise confirm success. This will be the decision tree point at the top of the loop will call the UnitEmailAPI, unitHelpDeskTicket, and retry functions to eventually trigger the final success email.
+9) [csvDNSCompareEmail.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/32c48eb0134a75beb9fa69cf4ae08cc5e32758e4/csvDNSCompareEmail.py): This creates a subset of our initial table converting it into a panda table or data frame (because its easier to convert directly into an HTML table instead of doing another loop) and triggers the Alert Email. What is not shown is our resource folder which previously had the list of devices and now has the Alert Email template in HTML format.
 
  </br></br>  
 
