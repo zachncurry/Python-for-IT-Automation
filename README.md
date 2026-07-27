@@ -179,3 +179,4 @@ Added the help desk ticket information into the Remediation Table and Alert Emai
 ## Next Steps </br>
 5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured</br>
 6) Send a Resolution Email to distribution list to include table summary</br>
+7) Refactor the code: Currently I have too much logic in the Main() that could be moved to a function.
