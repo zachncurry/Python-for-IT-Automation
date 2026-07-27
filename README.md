@@ -92,6 +92,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 8) [unitCompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/3bbbbc3f8e35f2829ded44b47bd396f0f9e21619/unitCompare.py): Adds a validation check if any devices have an alert to start the remediation process otherwise confirm success. This will be the decision tree point at the top of the loop will call the UnitEmailAPI, unitHelpDeskTicket, and retry functions to eventually trigger the final success email.
 9) [csvDNSCompareEmail.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/32c48eb0134a75beb9fa69cf4ae08cc5e32758e4/csvDNSCompareEmail.py): This creates a subset of our initial table converting it into a panda table or data frame (because its easier to convert directly into an HTML table instead of doing another loop) and triggers the Alert Email. What is not shown is our resource folder which previously had the list of devices and now has the Alert Email template in HTML format.
 10) [unitTicketAPI.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/457737ddb46200bb4b1b5f0e9fd719388aad40ca/unitTicketAPI.py): Testing the API call to Get and Push to the Help Desk Ticket via an API.
+11) [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py): Added the creation of a ticket for each impacted machine.
 
  </br></br>  
 
@@ -157,8 +158,14 @@ _The table was converted to a panda dataframe then to HTML instead of creating a
 
 ---
 
+## Remediation Step 3
+[csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py)</br>
+Use the loop to create the smaller remediation table to create a help desk ticket for each loop then called the Help Desk API to PUT for each row and returned the success message and ticket details back to the terminal.</br>
+<img width="1388" height="274" alt="image" src="https://github.com/user-attachments/assets/93accd1c-b463-486c-a4b7-a230f79bf76d" />
+
+---
+
 ## Next Steps </br>
-3) Create a Help Desk Ticket for each noncompliant device</br>
 4) Restart all DNS servers</br>
 5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured</br>
 6) Send a Resolution Email to distribution list to include table summary</br>
