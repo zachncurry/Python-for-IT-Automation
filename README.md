@@ -95,6 +95,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
  </br></br>  
 
 ## Initial Results</br>
+
 After initializing the network on GSN3, pinging the devices, and obtaining their DNS Configuration records issues have been found.</br>
 Our network is configured to use two DNS Servers located at 10.10.10.10 and 10.10.10.20 however an invalid DNS Server of 203.0.113.10 has been discovered.</br> 
 _127.0.0.53 is a loopback address common in networking_</br>
@@ -110,9 +111,6 @@ Here are the terminal results of the csvDNS.py file:
 4) Restart all DNS servers
 5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured
 6) Send a Resolution Email to distribution list to include table summary
-
-
-
 
 # Next Steps</br>
 
@@ -138,4 +136,22 @@ _A counter will be needed to track how many times the remediation efforts have f
  <img width="565" height="628" alt="image" src="https://github.com/user-attachments/assets/daf9c23a-b5a8-440f-90d4-2a895413a253" />
 
 
+## Remediation Step 1</br>
+[csvDNScompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNScompare.py)</br>
+Here we take the full list of devices and evaluate our configured DNS servers to the DNS server policy/ acceptable DNS servers.</br>
+TERMINAL RESULTS IMAGE COMING SOON!
 
+
+
+## Remediation Step 2</br>
+[csvDNSCompareEmail.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/32c48eb0134a75beb9fa69cf4ae08cc5e32758e4/csvDNSCompareEmail.py)</br>
+Now that we have a table analyzing all devices and identified a malicious DNS is configured on several devices we create a new Remediation Table to manage those devices separately.</br>
+<img width="442" height="146" alt="image" src="https://github.com/user-attachments/assets/0e3a7c68-d7c2-4eb8-a943-154c43c9f179" /></br>
+Then we send the first email notification to stakeholders informing them of the issue.</br>
+<img width="933" height="420" alt="image" src="https://github.com/user-attachments/assets/3aded4ac-e71f-4b24-832b-4136565731c8" />
+
+**Next Steps**</br>
+3) Create a Help Desk Ticket for each noncompliant device
+4) Restart all DNS servers
+5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured
+6) Send a Resolution Email to distribution list to include table summary
