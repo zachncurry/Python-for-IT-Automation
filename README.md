@@ -138,8 +138,10 @@ _A counter will be needed to track how many times the remediation efforts have f
 
 ## Remediation Step 1</br>
 [csvDNScompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNScompare.py)</br>
-Here we take the full list of devices and evaluate our configured DNS servers to the DNS server policy/ acceptable DNS servers.</br>
-TERMINAL RESULTS IMAGE COMING SOON!
+Here we take the full list of devices and evaluate our configured DNS servers to the DNS server policy/ acceptable DNS servers indicating an ALERT! in a new column to the right.</br>
+<img width="1513" height="595" alt="image" src="https://github.com/user-attachments/assets/9863e60f-8bba-40c8-a644-7c10e81e8817" />
+
+</br>
 
 ---
 
