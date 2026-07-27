@@ -78,10 +78,11 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 - Datetime 
 - EmailMessage 
 - smtplib 
-- pandas 
+- pandas
+- requests
 
 
-**Code Development Progress**
+**Code Development Progress/ Change Log**
 1) [unitReadCSV.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitReadCSV.py): Confirms the ability to add a CSV file to the file structure within a folder, read, and process the contained data
 2) [unitPing.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitPing.py): Confirms the ability to ping a device with hard coded host information
 3) [csvPing.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvPing.py): Confirms the ability to read device information from a CSV file, ping each device, and return the results of each Ping to a table
