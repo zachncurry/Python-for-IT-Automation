@@ -88,6 +88,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 5) [csvDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNS.py): Confirms the ability to read device information from a CSV file, ping, and get DNS configuration details, adding the results of each to a table
 6) [unitEmailAPI.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/unitEmailAPI.py): Confirms the ability to connect with the SMTP server and send hard coded email information
 7) [csvDNScompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNScompare.py): Takes the csvDNS table and evaluates the current DNS configurations to our acceptable DNS configurations
+8) [unitCompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/cd725b4cafac0fded48850d4a5e3c01bc0527b16/unitCompare.py): Adds a validation check if any devices have an alert to start the remediation process otherwise confirm success. This will be the decision tree point at the top of the loop will call the UnitEmailAPI, unitHelpDeskTicket, and retry functions to eventually trigger the final success email.
 
  </br></br>  
 
