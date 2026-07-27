@@ -141,17 +141,21 @@ _A counter will be needed to track how many times the remediation efforts have f
 Here we take the full list of devices and evaluate our configured DNS servers to the DNS server policy/ acceptable DNS servers.</br>
 TERMINAL RESULTS IMAGE COMING SOON!
 
+---
 
-
-## Remediation Step 2</br>
+## Remediation Step 2
 [csvDNSCompareEmail.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/32c48eb0134a75beb9fa69cf4ae08cc5e32758e4/csvDNSCompareEmail.py)</br>
 Now that we have a table analyzing all devices and identified a malicious DNS is configured on several devices we create a new Remediation Table to manage those devices separately.</br>
 <img width="442" height="146" alt="image" src="https://github.com/user-attachments/assets/0e3a7c68-d7c2-4eb8-a943-154c43c9f179" /></br>
-Then we send the first email notification to stakeholders informing them of the issue.</br>
+Then we send the alert email notification to stakeholders informing them of the issue. </br>
+_The table was converted to a panda dataframe then to HTML instead of creating another loop function._ </br></br>
 <img width="933" height="420" alt="image" src="https://github.com/user-attachments/assets/3aded4ac-e71f-4b24-832b-4136565731c8" />
+</br>
 
-**Next Steps**</br>
-3) Create a Help Desk Ticket for each noncompliant device
-4) Restart all DNS servers
-5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured
-6) Send a Resolution Email to distribution list to include table summary
+---
+
+## Next Steps </br>
+3) Create a Help Desk Ticket for each noncompliant device</br>
+4) Restart all DNS servers</br>
+5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured</br>
+6) Send a Resolution Email to distribution list to include table summary</br>
