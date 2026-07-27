@@ -94,6 +94,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 9) [csvDNSCompareEmail.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/32c48eb0134a75beb9fa69cf4ae08cc5e32758e4/csvDNSCompareEmail.py): This creates a subset of our initial table converting it into a panda table or data frame (because its easier to convert directly into an HTML table instead of doing another loop) and triggers the Alert Email. What is not shown is our resource folder which previously had the list of devices and now has the Alert Email template in HTML format.
 10) [unitTicketAPI.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/457737ddb46200bb4b1b5f0e9fd719388aad40ca/unitTicketAPI.py): Testing the API call to Get and Push to the Help Desk Ticket via an API.
 11) [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py): Added the creation of a ticket for each impacted machine.
+12) [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py): Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.
 
  </br></br>  
 
@@ -166,7 +167,15 @@ Use the loop to create the smaller remediation table to create a help desk ticke
 
 ---
 
+## Remediation Step 3
+[csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py)</br>
+Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.</br>
+<img width="255" height="155" alt="image" src="https://github.com/user-attachments/assets/7134e186-97ab-4eaf-9271-53b87bee4448" />
+
+
+---
+
+
 ## Next Steps </br>
-4) Restart all DNS servers</br>
 5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured</br>
 6) Send a Resolution Email to distribution list to include table summary</br>
