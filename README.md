@@ -203,7 +203,7 @@ While there are several ways to do this I am going to write a CSV read to append
   - Verify DNS config is now compliant</br> 
 - Update Ticket Status</br>
 
-[unitConnectCorrect.py]{https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py}: Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers. </br>
+[unitConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py): Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers. </br>
 
 
 
