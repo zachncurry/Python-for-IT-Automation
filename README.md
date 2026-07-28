@@ -95,6 +95,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 10) [unitTicketAPI.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/457737ddb46200bb4b1b5f0e9fd719388aad40ca/unitTicketAPI.py): Testing the API call to Get and Push to the Help Desk Ticket via an API.
 11) [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py): Added the creation of a ticket for each impacted machine.
 12) [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py): Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.
+13) [unitConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py): Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers.
 
  </br></br>  
 
@@ -202,7 +203,7 @@ While there are several ways to do this I am going to write a CSV read to append
   - Verify DNS config is now compliant</br> 
 - Update Ticket Status</br>
 
-
+[unitConnectCorrect.py]{https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py}: Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers. </br>
 
 
 
