@@ -181,13 +181,36 @@ And in general having worked in IT organizations you want to ensure there is doc
 <img width="1533" height="658" alt="image" src="https://github.com/user-attachments/assets/417879ff-71aa-4a05-97bb-588c759c9f95" /></br>
 
 
-
-
-
 ---
 
 
+## Remediation Step 5 </br>
+Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured</br>
+
+To connect to each device we will need to pass Username and Password information which we did not include in our tables and only used once to Ping and retrieve DNS config in the very start.
+While there are several ways to do this I am going to write a CSV read to append our Remediation Table to briefly store this information within this function.
+
+**Sudo Code**
+Read Remediation Table
+Read CSV parsing only devices listed in the Remediation Table
+Append Username & Password
+
+
+Connect to each device using IP, Username, Password via SSH
+Remove rouge DNS IP (Just adding IPs is not enough as devices can store multiple)
+Add Primary DNS IP
+Add Secondary DNS IP
+
+Retrieve DNS config
+
+Verify DNS config is now compliant
+
+Update Ticket Status
+
+
+
+
+
 ## Next Steps </br>
-5) Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured</br>
 6) Send a Resolution Email to distribution list to include table summary</br>
 7) Refactor the code: Currently I have too much logic in the Main() that could be moved to a function.
