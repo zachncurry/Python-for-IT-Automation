@@ -205,8 +205,10 @@ While there are several ways to do this I am going to write a CSV read to append
 
 [unitConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py): Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers. </br>
 
+I went a head and refactored the code to minimize the Main() by adding a new function.</br>
+Also added a state management integer to trigger an escalation after 3 attempts.</br>
 
 
+---
 ## Next Steps </br>
 6) Send a Resolution Email to distribution list to include table summary</br>
-7) Refactor the code: Currently I have too much logic in the Main() that could be moved to a function.
