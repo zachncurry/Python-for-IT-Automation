@@ -79,7 +79,6 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 - EmailMessage 
 - smtplib 
 - pandas
-- requests
 
 
 **Code Development Progress/ Change Log**
