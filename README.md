@@ -140,7 +140,7 @@ _A counter will be needed to track how many times the remediation efforts have f
  <img width="565" height="628" alt="image" src="https://github.com/user-attachments/assets/daf9c23a-b5a8-440f-90d4-2a895413a253" />
 
 
-## Remediation Step 1</br>
+## Remediation Step 1 </br>
 [csvDNScompare.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/01613626c8dd8845d15437ce52f92bf895de892d/csvDNScompare.py)</br>
 Here we take the full list of devices and evaluate our configured DNS servers to the DNS server policy/ acceptable DNS servers indicating an ALERT! in a new column to the right.</br>
 <img width="1513" height="595" alt="image" src="https://github.com/user-attachments/assets/9863e60f-8bba-40c8-a644-7c10e81e8817" />
@@ -149,7 +149,7 @@ Here we take the full list of devices and evaluate our configured DNS servers to
 
 ---
 
-## Remediation Step 2
+## Remediation Step 2 </br>
 [csvDNSCompareEmail.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/32c48eb0134a75beb9fa69cf4ae08cc5e32758e4/csvDNSCompareEmail.py)</br>
 Now that we have a table analyzing all devices and identified a malicious DNS is configured on several devices we create a new Remediation Table to manage those devices separately.</br>
 <img width="442" height="146" alt="image" src="https://github.com/user-attachments/assets/0e3a7c68-d7c2-4eb8-a943-154c43c9f179" /></br>
@@ -160,14 +160,14 @@ _The table was converted to a panda dataframe then to HTML instead of creating a
 
 ---
 
-## Remediation Step 3
+## Remediation Step 3 </br>
 [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py)</br>
 Use the loop to create the smaller remediation table to create a help desk ticket for each loop then called the Help Desk API to PUT for each row and returned the success message and ticket details back to the terminal.</br>
 <img width="1388" height="274" alt="image" src="https://github.com/user-attachments/assets/93accd1c-b463-486c-a4b7-a230f79bf76d" />
 
 ---
 
-## Remediation Step 3
+## Remediation Step 4 </br>
 [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py)</br>
 Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.</br>
 <img width="255" height="155" alt="image" src="https://github.com/user-attachments/assets/7134e186-97ab-4eaf-9271-53b87bee4448" />
