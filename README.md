@@ -4,7 +4,8 @@
 
 
 **Introduction**</br>
-Act as a company's network administrator during a cybersecurity incident in which the internal Domain Name System (DNS) service is down and devices are resolving through a rogue DNS address. Your mission is to quickly identify the root cause, verify and correct configurations on impacted devices, and implement enduring safeguards to prevent recurrence. You will manage a GitLab-based project with working branches, develop Python scripts to enumerate devices, verify connectivity and DNS settings, automatically notify stakeholders, create remediation tickets, and restore the DNS service while ensuring all affected devices are properly reconfigured.
+Act as a company's network administrator during a cybersecurity incident in which the internal Domain Name System (DNS) service is down and devices are resolving through a rogue DNS address. Your mission is to quickly identify the root cause, verify and correct configurations on impacted devices, and implement enduring safeguards to prevent recurrence. You will manage a GitLab-based project with working branches, develop Python scripts to enumerate devices, verify connectivity and DNS settings, automatically notify stakeholders, create remediation tickets, and restore the DNS service while ensuring all affected devices are properly reconfigured.</br>
+_Note: I am actively committing code to a Gitlab repository from VS for the lab. However, I am using my GitHub as my single source of truth, backup, and portfolio repository._</br>
 
 **Key Outcomes**</br>
 - Integrate Python scripts, modules, packages, and libraries to automate networking tasks and processes.
