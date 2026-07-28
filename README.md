@@ -170,14 +170,18 @@ Use the loop to create the smaller remediation table and for each iteration in t
 ## Remediation Step 4 </br>
 [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py)</br>
 Here we connect to each DNS Server and restart their services.</br>
+<img width="255" height="155" alt="image" src="https://github.com/user-attachments/assets/7134e186-97ab-4eaf-9271-53b87bee4448" /></br>
+</br>
 Also updated the email table to include the ticket id and status as well by parsing the JSON return from the Help Desk Ticket creation.</br>
+This will provide state management as the data point to evaluate when we should send a resolution email.</br>
+And in general having worked in IT organizations you want to ensure there is documentation outside of the inbox this provides stakeholders that reassurance for auditing purposes.</br>
 <img width="1071" height="194" alt="image" src="https://github.com/user-attachments/assets/377f632f-1bdc-435e-962f-49a9cb7a8556" /></br>
 
 
 <img width="1533" height="658" alt="image" src="https://github.com/user-attachments/assets/417879ff-71aa-4a05-97bb-588c759c9f95" /></br>
 
 
-<img width="255" height="155" alt="image" src="https://github.com/user-attachments/assets/7134e186-97ab-4eaf-9271-53b87bee4448" /></br>
+
 
 
 ---
