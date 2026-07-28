@@ -187,25 +187,20 @@ And in general having worked in IT organizations you want to ensure there is doc
 ## Remediation Step 5 </br>
 Connect and correct each noncompliant device on the network ensuring only policy approved DNS Servers are listed/configured</br>
 
-To connect to each device we will need to pass Username and Password information which we did not include in our tables and only used once to Ping and retrieve DNS config in the very start.
-While there are several ways to do this I am going to write a CSV read to append our Remediation Table to briefly store this information within this function.
+To connect to each device we will need to pass Username and Password information which we did not include in our tables and only used once to Ping and retrieve DNS config in the very start.</br>
+While there are several ways to do this I am going to write a CSV read to append our Remediation Table to briefly store this information within this function.</br>
 
-**Sudo Code**
-Read Remediation Table
-Read CSV parsing only devices listed in the Remediation Table
-Append Username & Password
-
-
-Connect to each device using IP, Username, Password via SSH
-Remove rouge DNS IP (Just adding IPs is not enough as devices can store multiple)
-Add Primary DNS IP
-Add Secondary DNS IP
-
-Retrieve DNS config
-
-Verify DNS config is now compliant
-
-Update Ticket Status
+**Sudo Code**</br>
+- Read Remediation Table</br>
+- Read CSV parsing only devices listed in the Remediation Table</br>
+  - Append Username & Password</br> 
+- Connect to each device using IP, Username, Password via SSH</br>
+  - Remove rouge DNS IP (Just adding IPs is not enough as devices can store multiple)</br>
+  - Add Primary DNS IP</br>
+  - Add Secondary DNS IP</br>
+- Retrieve DNS config</br>
+  - Verify DNS config is now compliant</br> 
+- Update Ticket Status</br>
 
 
 
