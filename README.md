@@ -162,14 +162,17 @@ _The table was converted to a panda dataframe then to HTML instead of creating a
 
 ## Remediation Step 3 </br>
 [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py)</br>
-Use the loop to create the smaller remediation table to create a help desk ticket for each loop then called the Help Desk API to PUT for each row and returned the success message and ticket details back to the terminal.</br>
+Use the loop to create the smaller remediation table and for each iteration in the loop Create a help desk ticket via Help Desk API and return the success message and ticket details back to the terminal.</br>
 <img width="1388" height="274" alt="image" src="https://github.com/user-attachments/assets/93accd1c-b463-486c-a4b7-a230f79bf76d" />
 
 ---
 
 ## Remediation Step 4 </br>
 [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py)</br>
-Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.</br>
+Here we connect to each DNS Server and restart their services.</br>
+Also updated the email table to include the ticket id and status as well.</br>
+WILL ADD AN IMAGE OF THE UPDATED TERMINAL TABLE</br>
+WILL ADD AN IMAGE OF THE UPDATE EMAIL NOTIFICATION</br>
 <img width="255" height="155" alt="image" src="https://github.com/user-attachments/assets/7134e186-97ab-4eaf-9271-53b87bee4448" />
 
 
