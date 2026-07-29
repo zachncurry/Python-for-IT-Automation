@@ -96,6 +96,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 11) [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py): Added the creation of a ticket for each impacted machine.
 12) [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py): Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.
 13) [unitConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py): Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers.
+14) [csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/ac3e226fddc7af147a0c9d0a4079816bd0a3d627/csvConnectCorrect.py): Incorporated the unit DNS Config script with several changes however a success! 
 
  </br></br>  
 
@@ -207,6 +208,20 @@ While there are several ways to do this I am going to write a CSV read to append
 
 I went a head and refactored the code to minimize the Main() by adding a new function.</br>
 Also added a state management integer to trigger an escalation after 3 attempts.</br>
+
+[csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/ac3e226fddc7af147a0c9d0a4079816bd0a3d627/csvConnectCorrect.py)</br>
+
+
+<img width="1086" height="244" alt="image" src="https://github.com/user-attachments/assets/da059688-503b-4f0e-9b37-ae9e7841a978" /></br>
+<img width="1084" height="394" alt="image" src="https://github.com/user-attachments/assets/19d65f2e-b4a3-448d-a897-7884b191bc95" /></br>
+<img width="1086" height="162" alt="image" src="https://github.com/user-attachments/assets/8f7bcaae-68cd-45de-994f-014e2ea26785" /></br>
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/3d5b9a63-6be5-449e-a739-9676c4d08b5b" /></br>
+<img width="1086" height="519" alt="image" src="https://github.com/user-attachments/assets/9bd8af07-880c-4136-bafd-1e0129c74fb1" /></br>
+
+Thankfully I had already started on logic and max try handling because now the lab is throwing errors and happy to report my script handles it resolving the DNS configs on the third attempt.</br>
+However, I now need to add error handling updates to the remediation table because only a few devices are affected then on the second pass more devices are affected so I want to avoid duplicative tickets and only add net new devices not remediated.</br>
+Additionally, because we want to send an all clear email I will need to persist even those devices that are fixed in previous attempts.</br>
+
 
 
 ---
