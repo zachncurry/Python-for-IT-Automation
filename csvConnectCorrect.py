@@ -11,20 +11,21 @@ import pandas as pd
 import requests
 import paramiko
 
-# GNS3 Configuration
-GNS3_HOST = "REDACTED"
-GNS3_SERVER = f"REDACTED"
-PROJECT_ID = "REDACTED"
+    
+# MARK: GNS3 Configuration
+GNS3_HOST = "localhost"
+GNS3_SERVER = f"http://{GNS3_HOST}:3080"
+PROJECT_ID = "980fb060-20d5-4268-8ba6-f215a2b4f9c3"
 #CSV File with Device Info
-CSV_PATH = "REDACTED"
+CSV_PATH = "resources/network_devices.csv"
 #DNS Server Configurations Allowed including Loopbacks and None Configured
 ALLOWED_DNS = {"10.10.10.10", "10.10.10.20", "127.0.0.1", "127.0.0.53", "None Configured"} # Defining Approved DNS Servers/Configs
 #Email Server Information
-EMAIL_HOST = "REDACTED"
-EMAIL_PORT = REDACTED
+EMAIL_HOST = "smtp.d522.wgu.internal"
+EMAIL_PORT = 1025
 #Help Desk API Information
-HELP_URL = "REDACTED"
-HELP_BEARER_TOKEN = "REDACTED"
+HELP_URL = "http://helpdesk.d522.wgu.internal:5000/api/tickets"
+HELP_BEARER_TOKEN = "vGkbXkGLqQSo7YLflp9DutuG8st4xdPPF7wnTcwB0FE"
 #Approved Named DNS Servers
 SERVER_NODES = ["DNS1", "DNS2"]
 #DNS Servers for Remediation & Per Allowed DNS Policy:
@@ -34,7 +35,7 @@ SECONDARY_DNS = "10.10.10.20"
 
 
 
-
+#MARK: DNS Analysis
 def dns_analysis(Incident_Response, remediation_table):
 
     table_device_status = []
@@ -177,43 +178,20 @@ def dns_analysis(Incident_Response, remediation_table):
 
 
 
-
-    
-
-
-
-def execute_console_commands(
-    host: str, port: int, username: str, password: str, commands: list
-) -> str:
-    #Logs into an Ubuntu console via Telnet and executes commands, returning output.
-    full_output = ""
-    try:
-        tn = telnetlib.Telnet(host, port, timeout=4)
-
-        # Handle login prompts if required
-        tn.write(b"\n")
-        response = tn.read_until(b"login: ", timeout=2)
-        if b"login:" in response:
-            tn.write(username.encode("ascii") + b"\n")
-            tn.read_until(b"Password: ", timeout=2)
-            tn.write(password.encode("ascii") + b"\n")
-
-
-       # Execute requested commands sequentially
-        for cmd in commands:
-            tn.write(cmd.encode("ascii") + b"\n")
-            full_output += tn.read_until(b"$ ", timeout=3).decode(
-                "utf-8", errors="ignore"
-            )
-
-        tn.close()
-    except Exception:
-        pass  # Return empty output if connection fails or times out
-
-    return full_output
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
 
 
 
+
+#MARK: Get Device Info from Console
 def get_device_info_via_console(
     host: str,
     port: int,
@@ -252,6 +230,8 @@ def get_device_info_via_console(
 
     return ip_address, dns_config
 
+
+#MARK: Ping Target IP
 def ping_target_ip(target_ip: str) -> bool:
     # Sends an ICMP ping to the target IP address.
     param = "-n" if platform.system().lower() == "windows" else "-c"
@@ -277,12 +257,200 @@ def ping_target_ip(target_ip: str) -> bool:
 
 
 
-######################
-#REMEDIATION FUNCTIONS Added 7/27/2026 & 7/28/2026
-######################
+
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
 
 
 
+
+
+
+
+#MARK: Main Remediation Logic
+def remediation_process(table_device_status, Incident_Response, remediation_table):
+    
+    for row in table_device_status:
+        if row[8] == "ALERT! Unathorized DNS Server(s)":
+            rem_list = [row [0], row[1], row[3], row[4], row[7]]
+            #remediation_table.append(rem_list)
+            ticket_data = create_ticket(rem_list)
+            if ticket_data:
+                combined_row = rem_list + ticket_data
+                remediation_table.append(combined_row)
+            else:
+                remediation_table.append(rem_list)
+        else:
+            remediation_table = remediation_table       
+    headers = [
+        "Time Stamp",
+        "Device Name",
+        "Resolved IP",
+        "Subnet",
+        "Configured DNS",
+        "Help Desk Ticket ID",
+        "Ticket Status"
+    ]
+
+
+ 
+    
+    print(
+        "\n" + tabulate.tabulate(remediation_table, headers=headers, tablefmt="grid")
+            )
+
+
+    if any('open' in row for row in remediation_table):
+
+            if Incident_Response == 1:
+                send_Alert(remediation_table)
+                dns_Restart()
+                print("⚠️ Connecting & Correcting Affected Devices")
+                connect_Correct(remediation_table)
+                print("⚠️ Initiating Re-evaluation of DNS Configurations on Affected Devices")
+                dns_analysis(Incident_Response, remediation_table)
+            elif Incident_Response > 3:
+                print("⚠️ Escalating to IT Security Team - Incident Response Level 3")
+                #HOLDING SPACE FOR TICKET PRIORITY ESCALATION & UPDATED DESCRIPTION FUNCTION
+                #HOLDING SPACE FOR ESCALATION EMAIL FUNCTION
+                print("\n" + tabulate.tabulate(remediation_table, headers=headers, tablefmt="grid"))   
+            else:
+                print("⚠️ DNS Server Issue Not Resolved... Restarting Remediation...")
+                print("⚠️ Connecting & Correcting Affected Devices")
+                connect_Correct(remediation_table)
+                print("⚠️ Initiating Re-evaluation of DNS Configurations on All Devices")
+                dns_analysis(Incident_Response, remediation_table) 
+    
+    else:
+            print("✅ Rogue DNS Violation Successfuly Resolved")
+            #HOLDING SPACE FOR SUCCESS EMAIL
+            print("✅ Rogue DNS Resolved Email Sent Successfuly")
+            print("\n" + tabulate.tabulate(remediation_table, headers=headers, tablefmt="grid"))  
+
+
+
+
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+
+
+
+
+#MARK: Send Alert Email
+def send_Alert(remediation_table):
+
+    #Convert Pyhon Table to Panda Dataframe for easier html conversaion
+    df = pd.DataFrame(
+        remediation_table,
+        columns=["Time Stamp", "Hostname", "IP Address", "Subnet", "DNS Violation", "Help Desk Ticket ID", "Help Desk Ticket Status"]
+        )
+
+    #Get HTML email template
+    with open("resources/alert_email.html", "r", encoding = "utf-8") as file:
+        html_content = file.read()
+
+    #Convert Python Table to Panda Dataframe to HTML
+    table_html = df.to_html(index=False, border = 1)
+    final_html = html_content.replace("{{remediation_table}}", table_html)
+
+
+    #Construct Email Alert Message
+    msg = EmailMessage()
+    
+    msg['Subject'] = "URGENT: Device Compromise Detected—Immediate Attention Required [Do not reply this is an automated message]"
+    msg['From'] = "from@wgu.edu"
+    msg['To'] = "to@wgu.edu"
+
+    msg.set_content("This is an automated email.")
+    msg.add_alternative(final_html, subtype="html")
+
+    #Send Email
+    try:
+        with smtplib.SMTP(EMAIL_HOST, EMAIL_PORT) as server:
+            server.send_message(msg)
+            print("✅ Email ALERT sent successfully!")
+    except Exception as e:
+            print(f"Failed to send email: {e}")
+
+
+
+
+
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+
+
+#MARK: Create Ticket
+#Create Help Desk Ticket for each device in the remediation table
+def create_ticket(rem_list):
+
+
+    headers = {
+    "Authorization": f"Bearer {HELP_BEARER_TOKEN}",
+    "Accept": "application/json"
+    }
+
+    payload ={
+    "assigned_to": "Unassigned",
+    "description": f"Device {rem_list[1]} (IP:{rem_list[2]}) has rouge DNS configured: {rem_list[4]}",
+    "priority": "high",
+    "requester_email": "system@sytem.com",
+    "status": "open",
+    "title": "Rogue DNS Server Found - Remediation in Progress"
+    }
+
+    try:
+        response = requests.post(HELP_URL, headers=headers, json=payload)
+
+        print(response.status_code)
+        print(response.json())
+        response_json = response.json()
+        ticket_id = response_json.get("id")
+        ticket_status = response_json.get("status")
+        print("✅Created Help Desk Ticket!")
+        return [ticket_id, ticket_status]
+    except Exception as e:
+        print(f"Failed to create help desk ticket: {e}")
+        return None
+    
+
+
+
+
+
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+    
+
+#MARK: Connect & Correct
 #Connect & Correct each affected device
 def connect_Correct(remediation_table):
 
@@ -332,12 +500,6 @@ def connect_Correct(remediation_table):
 
 
 
-##> Choice: Either re-review the table here OR put it through the established loop?
-
-# Call Update Ticket Status to Closed
-
-
-
 ####################
 ####################
 ####################
@@ -349,11 +511,10 @@ def connect_Correct(remediation_table):
 ####################
 
 
-
+#MARK: Start/Stop DNS
 #Restart DNS Servers [This code is mostly found in start_gns3_network.py]
-session = requests.Session()
-
 def get_nodes():
+    session = requests.Session()
     r = session.get(f"{GNS3_SERVER}/v2/projects/{PROJECT_ID}/nodes")
     r.raise_for_status()
     return r.json()
@@ -405,150 +566,67 @@ def dns_Restart():
 
 #Restart DNS Servers^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-
-
-#Send Alert Email
-def send_Alert(remediation_table):
-
-    #Convert Pyhon Table to Panda Dataframe for easier html conversaion
-    df = pd.DataFrame(
-        remediation_table,
-        columns=["Time Stamp", "Hostname", "IP Address", "Subnet", "DNS Violation", "Help Desk Ticket ID", "Help Desk Ticket Status"]
-        )
-
-    #Get HTML email template
-    with open("resources/alert_email.html", "r", encoding = "utf-8") as file:
-        html_content = file.read()
-
-    #Convert Python Table to Panda Dataframe to HTML
-    table_html = df.to_html(index=False, border = 1)
-    final_html = html_content.replace("{{remediation_table}}", table_html)
-
-
-    #Construct Email Alert Message
-    msg = EmailMessage()
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
     
-    msg['Subject'] = "URGENT: Device Compromise Detected—Immediate Attention Required [Do not reply this is an automated message]"
-    msg['From'] = "REDACTED"
-    msg['To'] = "REDACTED"
 
-    msg.set_content("This is an automated email.")
-    msg.add_alternative(final_html, subtype="html")
 
-    #Send Email
+#MARK: Execute Console Commands
+def execute_console_commands(
+    host: str, port: int, username: str, password: str, commands: list
+) -> str:
+    #Logs into an Ubuntu console via Telnet and executes commands, returning output.
+    full_output = ""
     try:
-        with smtplib.SMTP(EMAIL_HOST, EMAIL_PORT) as server:
-            server.send_message(msg)
-            print("✅ Email ALERT sent successfully!")
-    except Exception as e:
-            print(f"Failed to send email: {e}")
+        tn = telnetlib.Telnet(host, port, timeout=4)
+
+        # Handle login prompts if required
+        tn.write(b"\n")
+        response = tn.read_until(b"login: ", timeout=2)
+        if b"login:" in response:
+            tn.write(username.encode("ascii") + b"\n")
+            tn.read_until(b"Password: ", timeout=2)
+            tn.write(password.encode("ascii") + b"\n")
 
 
-
-#Create Help Desk Ticket for each device in the remediation table
-def create_ticket(rem_list):
-
-
-    headers = {
-    "Authorization": f"Bearer {HELP_BEARER_TOKEN}",
-    "Accept": "application/json"
-    }
-
-    payload ={
-    "assigned_to": "Unassigned",
-    "description": f"Device {rem_list[1]} (IP:{rem_list[2]}) has rouge DNS configured: {rem_list[4]}",
-    "priority": "high",
-    "requester_email": "system@sytem.com",
-    "status": "open",
-    "title": "Rogue DNS Server Found - Remediation in Progress"
-    }
-
-    try:
-        response = requests.post(HELP_URL, headers=headers, json=payload)
-
-        print(response.status_code)
-        print(response.json())
-        response_json = response.json()
-        ticket_id = response_json.get("id")
-        ticket_status = response_json.get("status")
-        print("✅Created Help Desk Ticket!")
-        return [ticket_id, ticket_status]
-    except Exception as e:
-        print(f"Failed to create help desk ticket: {e}")
-        return None
-    
-    
-
-#Main Remediation Logic
-def remediation_process(table_device_status, Incident_Response, remediation_table):
-    
-    for row in table_device_status:
-        if row[8] == "ALERT! Unathorized DNS Server(s)":
-            rem_list = [row [0], row[1], row[3], row[4], row[7]]
-            #remediation_table.append(rem_list)
-            ticket_data = create_ticket(rem_list)
-            if ticket_data:
-                combined_row = rem_list + ticket_data
-                remediation_table.append(combined_row)
-            else:
-                remediation_table.append(rem_list)
-        else:
-            remediation_table = remediation_table       
-    headers = [
-        "Time Stamp",
-        "Device Name",
-        "Resolved IP",
-        "Subnet",
-        "Configured DNS",
-        "Help Desk Ticket ID",
-        "Ticket Status"
-    ]
-
-
-
-   
-    
-    print(
-        "\n" + tabulate.tabulate(remediation_table, headers=headers, tablefmt="grid")
+       # Execute requested commands sequentially
+        for cmd in commands:
+            tn.write(cmd.encode("ascii") + b"\n")
+            full_output += tn.read_until(b"$ ", timeout=3).decode(
+                "utf-8", errors="ignore"
             )
 
+        tn.close()
+    except Exception:
+        pass  # Return empty output if connection fails or times out
 
-    if any('open' in row for row in remediation_table):
-
-            if Incident_Response == 1:
-                send_Alert(remediation_table)
-                dns_Restart()
-                print("⚠️ Connecting & Correcting Affected Devices")
-                connect_Correct(remediation_table)
-                print("⚠️ Initiating Re-evaluation of DNS Configurations on Affected Devices")
-                dns_analysis(Incident_Response, remediation_table)
-            elif Incident_Response > 3:
-                print("⚠️ Escalating to IT Security Team - Incident Response Level 3")
-                #HOLDING SPACE FOR TICKET PRIORITY ESCALATION & UPDATED DESCRIPTION FUNCTION
-                #HOLDING SPACE FOR ESCALATION EMAIL FUNCTION
-                print("\n" + tabulate.tabulate(remediation_table, headers=headers, tablefmt="grid"))   
-            else:
-                print("⚠️ DNS Server Issue Not Resolved... Restarting Remediation...")
-                print("⚠️ Connecting & Correcting Affected Devices")
-                connect_Correct(remediation_table)
-                print("⚠️ Initiating Re-evaluation of DNS Configurations on All Devices")
-                dns_analysis(Incident_Response, remediation_table) 
-    
-    else:
-            print("✅ Rogue DNS Violation Successfuly Resolved")
-            #HOLDING SPACE FOR SUCCESS EMAIL
-            print("✅ Rogue DNS Resolved Email Sent Successfuly")
-            print("\n" + tabulate.tabulate(remediation_table, headers=headers, tablefmt="grid"))  
+    return full_output
 
 
+
+
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
+####################
 
 
 
     
-    
 
-
+#MARK: Main
 def main():
     Incident_Response = 0
     remediation_table = []
