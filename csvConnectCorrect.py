@@ -13,19 +13,19 @@ import paramiko
 
     
 # MARK: GNS3 Configuration
-GNS3_HOST = "localhost"
-GNS3_SERVER = f"http://{GNS3_HOST}:3080"
-PROJECT_ID = "980fb060-20d5-4268-8ba6-f215a2b4f9c3"
+GNS3_HOST = "REDACTED"
+GNS3_SERVER = f"REDACTED"
+PROJECT_ID = "REDACTED"
 #CSV File with Device Info
 CSV_PATH = "resources/network_devices.csv"
 #DNS Server Configurations Allowed including Loopbacks and None Configured
 ALLOWED_DNS = {"10.10.10.10", "10.10.10.20", "127.0.0.1", "127.0.0.53", "None Configured"} # Defining Approved DNS Servers/Configs
 #Email Server Information
-EMAIL_HOST = "smtp.d522.wgu.internal"
-EMAIL_PORT = 1025
+EMAIL_HOST = "REDACTED"
+EMAIL_PORT = REDACTED
 #Help Desk API Information
-HELP_URL = "http://helpdesk.d522.wgu.internal:5000/api/tickets"
-HELP_BEARER_TOKEN = "vGkbXkGLqQSo7YLflp9DutuG8st4xdPPF7wnTcwB0FE"
+HELP_URL = "REDACTED"
+HELP_BEARER_TOKEN = "REDACTED"
 #Approved Named DNS Servers
 SERVER_NODES = ["DNS1", "DNS2"]
 #DNS Servers for Remediation & Per Allowed DNS Policy:
@@ -372,8 +372,8 @@ def send_Alert(remediation_table):
     msg = EmailMessage()
     
     msg['Subject'] = "URGENT: Device Compromise Detected—Immediate Attention Required [Do not reply this is an automated message]"
-    msg['From'] = "from@wgu.edu"
-    msg['To'] = "to@wgu.edu"
+    msg['From'] = "REDACTED"
+    msg['To'] = "REDACTED"
 
     msg.set_content("This is an automated email.")
     msg.add_alternative(final_html, subtype="html")
