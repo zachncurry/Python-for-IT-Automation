@@ -96,7 +96,7 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 11) [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py): Added the creation of a ticket for each impacted machine.
 12) [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py): Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.
 13) [unitConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py): Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers.
-14) [csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/ac3e226fddc7af147a0c9d0a4079816bd0a3d627/csvConnectCorrect.py): Incorporated the unit DNS Config script with several changes however a success! 
+14) [csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/09488f6ab22c8a452652fbeff2ccf608db3db7e0/csvConnectCorrect.py): Incorporated the unit DNS Config script with several changes however a success! 
 
  </br></br>  
 
@@ -209,7 +209,7 @@ While there are several ways to do this I am going to write a CSV read to append
 I went a head and refactored the code to minimize the Main() by adding a new function, added MARK notation for easier searching, and re-ordered the functions in a more logical order.</br>
 Also added a state management integer to trigger an escalation after 3 attempts.</br>
 
-[csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/ac3e226fddc7af147a0c9d0a4079816bd0a3d627/csvConnectCorrect.py)</br>
+[csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/09488f6ab22c8a452652fbeff2ccf608db3db7e0/csvConnectCorrect.py)</br>
 
 
 <img width="1086" height="244" alt="image" src="https://github.com/user-attachments/assets/da059688-503b-4f0e-9b37-ae9e7841a978" /></br>
