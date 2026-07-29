@@ -206,7 +206,7 @@ While there are several ways to do this I am going to write a CSV read to append
 
 [unitConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py): Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers. </br>
 
-I went a head and refactored the code to minimize the Main() by adding a new function.</br>
+I went a head and refactored the code to minimize the Main() by adding a new function, added MARK notation for easier searching, and re-ordered the functions in a more logical order.</br>
 Also added a state management integer to trigger an escalation after 3 attempts.</br>
 
 [csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/ac3e226fddc7af147a0c9d0a4079816bd0a3d627/csvConnectCorrect.py)</br>
