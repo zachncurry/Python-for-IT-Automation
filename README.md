@@ -218,10 +218,9 @@ Also added a state management integer to trigger an escalation after 3 attempts.
 <img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/3d5b9a63-6be5-449e-a739-9676c4d08b5b" /></br>
 <img width="1086" height="519" alt="image" src="https://github.com/user-attachments/assets/9bd8af07-880c-4136-bafd-1e0129c74fb1" /></br>
 
-Thankfully I had already started on logic and max try handling because now the lab is throwing errors and happy to report my script handles it resolving the DNS configs on the third attempt.</br>
-However, I now need to add error handling updates to the remediation table because only a few devices are affected then on the second pass more devices are affected so I want to avoid duplicative tickets and only add net new devices not remediated.</br>
-Additionally, because we want to send an all clear email I will need to persist even those devices that are fixed in previous attempts.</br>
+Thankfully I had already started on logic and max try handling because now the lab is throwing errors and happy to report my script handles it just fine!</br>
 
+I still need to update the status of the tickets. I added this to the scope so I can include the information into the final email for the first portion of this lab.
 
 
 ---
