@@ -252,7 +252,7 @@ _Ohhh - Call me the barber because I got those edge cases!_ ✂️🤣🤣
 **All jokes aside... I enjoy learning not only by doing but through feedback as well.**</br>
 **If you have ideas on how this could be even better or where I could improve let's collaborate!**</br>
 **Connect with me on LinkedIn:**</br>
-https://linkedin.com](https://www.linkedin.com/in/zachary-curry-pmp</br>
+https://www.linkedin.com/in/zachary-curry-pmp</br>
 </br>
 **More to Come for Part 2...**
 
