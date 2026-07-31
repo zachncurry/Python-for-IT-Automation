@@ -227,8 +227,8 @@ I still need to update the status of the tickets. I added this to the scope so I
 ---
 
 ## Remediation Step 6 </br>
-[RemediationFinal.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/1d42c50dc0dbd6020eebfe74213bb8129d6a1e4f/RemediationFinal.py)
-_Oh - Call me the barber because I got those edge cases!_
+[RemediationFinal.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/1d42c50dc0dbd6020eebfe74213bb8129d6a1e4f/RemediationFinal.py)</br>
+_Ohhh - Call me the barber because I got those edge cases!_ ✂️🤣🤣 
 
 **Changes Made**</br>
 - Restructured the logic to address an ongoing Rogues DNS Server attack (simulated by the lab)
