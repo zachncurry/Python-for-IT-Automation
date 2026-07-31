@@ -256,4 +256,4 @@ _Oh - Call me the barber because I got those edge cases!_
 
 ## Next Steps </br>
 **PART 2**
-1) Add periodic automation functionality to set often this script should run automatically</br>
+1) Add periodic automation functionality</br>
