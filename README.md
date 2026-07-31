@@ -96,7 +96,8 @@ _While specialty software exists, a simple PowerPoint organizational chart is he
 11) [csvDNS_Email_Ticket.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/dc9121f8a0e14555fa476241081e05453adac4d1/csvDNS_Email_Ticket.py): Added the creation of a ticket for each impacted machine.
 12) [csvDNS_Email_Ticket_RestartDNS.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/a64058b92b62fdf07f1c7d68706077f098612a6a/csvDNS_email_ticket_RestartDNS.py): Added the help desk ticket information into the Remediation Table and Alert Email for additional context for end users and to manage the loop logic to determine when the incident is fully resolved. Then added the Stop and Start (Restarting) of the DNS Servers.
 13) [unitConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/449d535a6ea20c21b00f08fec9fa9bc033a59f3d/unitConnectCorrect.py): Hard coded information such as device information, username, password and rogue DNS IP to test connectivity, remove, and update. Found the 22 port while open but timing out requiring the need to add the ability to try other port numbers.
-14) [csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/09488f6ab22c8a452652fbeff2ccf608db3db7e0/csvConnectCorrect.py): Incorporated the unit DNS Config script with several changes however a success! 
+14) [csvConnectCorrect.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/09488f6ab22c8a452652fbeff2ccf608db3db7e0/csvConnectCorrect.py): Incorporated the unit DNS Config script with several changes however a success!
+15) [RemediationFinal.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/1d42c50dc0dbd6020eebfe74213bb8129d6a1e4f/RemediationFinal.py): Restructured the logic to address ongoing Rogues DNS Server attacks, added the final notification email, added the update Help Desk Ticket, and final remediation table/results. 
 
  </br></br>  
 
@@ -224,5 +225,35 @@ I still need to update the status of the tickets. I added this to the scope so I
 
 
 ---
+
+## Remediation Step 6 </br>
+[RemediationFinal.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/1d42c50dc0dbd6020eebfe74213bb8129d6a1e4f/RemediationFinal.py)
+_Oh - Call me the barber because I got those edge cases!_
+
+**Changes Made**</br>
+- Restructured the logic to address an ongoing Rogues DNS Server attack (simulated by the lab)
+- Added the final resolution email
+- Added update Help Desk Ticket
+- And determined final remediation results
+
+**Resolved Email Notification**</br>
+<img width="703" height="332" alt="image" src="https://github.com/user-attachments/assets/f6a83ece-8ecc-4710-9ba7-75deff3e0592" /></br>
+
+
+ **Terminal Output**</br>
+ _I removed the tables that I was using for troubleshooting and added dynamic statements._</br>
+ _Notice after the first three devices are identified and remediated a fourth device becomes compromised_</br>
+<img width="342" height="289" alt="image" src="https://github.com/user-attachments/assets/36b8e2c6-9777-4614-abc9-d53f599d28dd" /></br>
+<img width="336" height="359" alt="image" src="https://github.com/user-attachments/assets/594eeffb-3304-4bc9-849b-e3146da09afe" /></br>
+<img width="344" height="287" alt="image" src="https://github.com/user-attachments/assets/e02f25b7-81a2-478b-b705-6b32b118c57f" /></br>
+<img width="344" height="174" alt="image" src="https://github.com/user-attachments/assets/7e25e627-5cc7-4fc7-9092-6dc9ce55ead2" /></br>
+
+
+**Very open to feedback on how I could make this better!**
+**More to Come for Part 2...**
+
+ 
+
 ## Next Steps </br>
-6) Send a Resolution Email to distribution list to include table summary</br>
+**PART 2**
+1) Add periodic automation functionality to set often this script should run automatically</br>
