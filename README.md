@@ -249,7 +249,11 @@ _Ohhh - Call me the barber because I got those edge cases!_ ✂️🤣🤣
 <img width="344" height="174" alt="image" src="https://github.com/user-attachments/assets/7e25e627-5cc7-4fc7-9092-6dc9ce55ead2" /></br>
 
 
-**Very open to feedback on how I could make this better!**
+**All jokes aside... I enjoy learning not only by doing but through feedback as well.**</br>
+**If you have ideas on how this could be even better or where I could improve let's collaborate!**</br>
+**Connect with me on LinkedIn:**</br>
+https://linkedin.com](https://www.linkedin.com/in/zachary-curry-pmp</br>
+</br>
 **More to Come for Part 2...**
 
  
