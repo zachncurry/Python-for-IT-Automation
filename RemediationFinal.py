@@ -737,7 +737,7 @@ def send_Notification(remediation_table):
     try:
         with smtplib.SMTP(EMAIL_HOST, EMAIL_PORT) as server:
             server.send_message(msg)
-            print("\n✅ Email ALERT Sent Successfully!")
+            print("\n✅ Remediation Results Notification Email Sent Successfully!")
     except Exception as e:
             print(f"\n🔴 Failed to send email: {e}")
 
