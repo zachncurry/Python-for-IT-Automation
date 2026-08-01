@@ -237,19 +237,25 @@ _Ohhh - Call me the barber because I got those edge cases!_ ✂️🤣🤣
 - And determined final remediation results
 
 **Resolved Email Notification**</br>
-<img width="703" height="332" alt="image" src="https://github.com/user-attachments/assets/f6a83ece-8ecc-4710-9ba7-75deff3e0592" /></br>
+<img width="1506" height="571" alt="image" src="https://github.com/user-attachments/assets/1d97a330-694d-4fd9-9373-b2689282145d" /></br>
+<img width="1518" height="139" alt="image" src="https://github.com/user-attachments/assets/0524a6e8-eebc-4107-9676-94949ed811b3" /></br>
+
+
 
 
  **Terminal Output**</br>
- _I removed the tables that I was using for troubleshooting and added dynamic statements._</br>
- _Notice after the first three devices are identified and remediated a fourth device becomes compromised_</br>
-<img width="342" height="289" alt="image" src="https://github.com/user-attachments/assets/36b8e2c6-9777-4614-abc9-d53f599d28dd" /></br>
-<img width="336" height="359" alt="image" src="https://github.com/user-attachments/assets/594eeffb-3304-4bc9-849b-e3146da09afe" /></br>
-<img width="344" height="287" alt="image" src="https://github.com/user-attachments/assets/e02f25b7-81a2-478b-b705-6b32b118c57f" /></br>
-<img width="344" height="174" alt="image" src="https://github.com/user-attachments/assets/7e25e627-5cc7-4fc7-9092-6dc9ce55ead2" /></br>
+ _I removed the tables used for troubleshooting and added dynamic statements in the terminal for a better user experience so that anyone could understand the actions/status of this program._</br>
+ _Re-ran the lab on 8/1/26 to get better terminal images and the lab ran a different pattern showing all 4 devices already compromised instead of the 3 then 1 pattern which is why having a good lab is so important to test your ideas!_
+<img width="654" height="322" alt="image" src="https://github.com/user-attachments/assets/6e7c5294-273d-435d-b740-060cbffe23f1" /></br>
+<img width="758" height="374" alt="image" src="https://github.com/user-attachments/assets/0f99daa2-535e-48b0-810f-e26585359781" /></br>
+<img width="861" height="309" alt="image" src="https://github.com/user-attachments/assets/ac61f5c0-5ba3-4350-87f2-8151fabff4fc" /></br>
+<img width="763" height="381" alt="image" src="https://github.com/user-attachments/assets/b2ee8169-b2ab-44ea-98a7-54a6028184d9" /></br>
+<img width="801" height="261" alt="image" src="https://github.com/user-attachments/assets/27573eba-d72a-4e1e-bf59-a8a39c146f4a" /></br>
 
 
-**All jokes aside... I enjoy learning not only by doing but through feedback as well.**</br>
+
+
+**All jokes aside... I enjoy learning not only by doing but through feedback and collaboration as well.**</br>
 **If you have ideas on how this could be even better or where I could improve let's collaborate!**</br>
 **Connect with me on LinkedIn:**</br>
 https://www.linkedin.com/in/zachary-curry-pmp</br>
