@@ -271,8 +271,9 @@ Before coding anything I want to make sure I can access these from the Server Co
 For _meow_ we will use the cat (short for concatenate) function to read the contents of /etc/bind/named.conf.local </br>
 <img width="519" height="535" alt="image" src="https://github.com/user-attachments/assets/d1ac1635-3e53-40fe-9588-ead819d086c0" />
 
-Then we use Netmiko a vendor neutral network automation library to help us connect and retrieve these results programmatically, copy, and add to our DNS Backup Files.
-
+Then we use Netmiko a vendor neutral network automation library to help us connect and retrieve these results programmatically, copy, and add to our DNS Backup Files.</br>
+[UnitDNS_dump.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/c2a47cc8bf673de843b5feccb2d0ab361f60e60b/unitDNS_dump.py) Unit testing the DNS Configuration dump. </br>
+I did first try the file directly and received guidance to use "resolvectl status" instead. That is the thing with coding... The hardest part is getting started made easier by planning first and then adjusting based on the feedback/errors received.</br>_Just like life!_</br>
 
 ## Next Steps</br>
 2) Separate the PING functionality and if Ping can not be resolved add a Ping Alert Email
