@@ -266,6 +266,7 @@ While there is more to do on this project I would like to take a moment and docu
 
 
 ## DNS Server Configurations</br>
+Abstract the DNS config records from each server creating a backup (example Google 8.8.8.8)</br>
 Before coding anything I want to make sure I can access these from the Server Command Line and understand what exactly is expected.</br>
 For _meow_ we will use the cat (short for concatenate) function to read the contents of /etc/bind/named.conf.local </br>
 <img width="519" height="535" alt="image" src="https://github.com/user-attachments/assets/d1ac1635-3e53-40fe-9588-ead819d086c0" />
@@ -274,9 +275,6 @@ Then we use Netmiko a vendor neutral network automation library to help us conne
 
 
 ## Next Steps</br>
-
-
-1) Abstract the DNS config records from each server creating a backup (example Google 8.8.8.8)
 2) Separate the PING functionality and if Ping can not be resolved add a Ping Alert Email
 3) Verify the DNS configs for each DNS server and if altered incorrectly send an Alert Email
 4) Add a log file to document system checks, modifications, errors
