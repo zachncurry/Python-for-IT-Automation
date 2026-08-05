@@ -264,4 +264,9 @@ While there is more to do on this project I would like to take a moment and docu
  - **Planning:** Everything is 20/20 once you have done it... I missed a few edge cases and I now see the gap in my planning. I did not write out the combination of variable states that would be important making my final 48 hours focused on bug hunting. If I would have documented all combinations such as: Pass Initial Review - Ticket: Open, Failed Review - Ticket: Closed, I would have done better at finding ALL the edge cases to ensure it is bullet proof. My planning was focused mostly on workflow and I anticipated many of the states but missed the smaller edge cases causing the delay.
  - **Centralized Decision Function:** Currently the logic is spread across a few functions which is not ideal for anyone trying to advance this code base and potentially if I had done better planning I may have been able to unify the logic into a singular function.
 
-
+## Next Steps</br>
+1) Add time.sleep function to automatically run every x period
+2) Abstract the DNS config records from each server creating a backup (example Google 8.8.8.8)
+3) Separate the PING functionality and if Ping can not be resolved add a Ping Alert Email
+4) Verify the DNS configs for each DNS server and if altered incorrectly send an Alert Email
+5) Add a log file to document system checks, modifications, errors
