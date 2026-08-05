@@ -4,32 +4,18 @@
 
 
 **Introduction**</br>
-Act as a company's network administrator during a cybersecurity incident in which the internal Domain Name System (DNS) service is down and devices are resolving through a rogue DNS address. Your mission is to quickly identify the root cause, verify and correct configurations on impacted devices, and implement enduring safeguards to prevent recurrence. You will manage a GitLab-based project with working branches, develop Python scripts to enumerate devices, verify connectivity and DNS settings, automatically notify stakeholders, create remediation tickets, and restore the DNS service while ensuring all affected devices are properly reconfigured.</br>
-_Note: I am actively committing code to a Gitlab repository from VS for the lab. However, I am using my GitHub as my single source of truth, backup, and portfolio repository._</br>
+During an active cybersecurity incident, the legitimate internal Domain Name System (DNS) service was disabled, causing corporate end-user devices and infrastructure to resolve traffic through an unauthorized rogue DNS address.</br>
+The objective of this project is to identify the root cause of the hijack, verify and correct network client configurations, restore internal DNS service, and deploy permanent technical safeguards to prevent recurrence.</br></br>
 
-**Key Outcomes**</br>
-- Integrate Python scripts, modules, packages, and libraries to automate networking tasks and processes.
+**Key Objectives**</br>
+- **Root Cause Analysis:** Isolate the malicious actor or rouge server and determine the vector used to alter client DNS settings (e.g., rogue DHCP server, local host modifications, or compromised router configs).</br>
+- **Automated Audit & Verification:** Enumerate all network endpoints and continuously inspect DNS resolver settings and network connectivity.</br>
+- **Incident Communication & Tracking:** Automatically alert critical stakeholders and generate remediation tickets for impacted hosts.</br>
+- **Service Restoration & Hardening:** Bring legitimate internal DNS servers back online, revert rogue configurations, and enforce DNS security policy safeguards.</br>
 
 **Network Diagram**</br>
 _GSN3 Instance_</br>
 <img width="687" height="730" alt="image" src="https://github.com/user-attachments/assets/2284ac39-f290-430c-8a01-8a95079f5250" />
-
-
-
-## Part One
-**Scenario**</br>
-As the network administrator for your company, you are alerted to a cybersecurity incident involving a DNS service outage. The internal DNS service is currently down, and you discover that several network devices have been reconfigured to use an unauthorized, potentially malicious DNS address. Immediate action is required to restore proper DNS functionality and secure the network.
-
- 
-**Problem Statement:**</br>
-I am responsible for identifying the root cause of the DNS resolution issue and restoring normal operations. This includes investigating the source of the unauthorized DNS changes, verifying and correcting DNS configurations on all affected devices, and implementing immediate remediation steps to secure the network against further compromise.
-
-## Part Two
-**Scenario**</br>
-After resolving the immediate DNS service outage and restoring correct DNS configurations on all network devices, you recognize the need to prevent similar incidents in the future. As the network administrator, you are responsible for implementing proactive measures to detect and respond to unauthorized DNS changes or service disruptions before they impact business operations.
-
-**Problem Statement:** </br>
-To ensure ongoing network security and reliability, you must design and implement a solution that regularly monitors DNS configurations and device status across the network. This solution should automatically alert stakeholders if any anomalies or unauthorized changes are detected, helping prevent future DNS-related attacks or outages.
 
 
 # Process Overview
@@ -279,7 +265,3 @@ While there is more to do on this project I would like to take a moment and docu
  - **Centralized Decision Function:** Currently the logic is spread across a few functions which is not ideal for anyone trying to advance this code base and potentially if I had done better planning I may have been able to unify the logic into a singular function.
 
 
-
-## Next Steps </br>
-**PART 2**
-1) Add periodic automation functionality</br>
