@@ -268,7 +268,7 @@ While there is more to do on this project I would like to take a moment and docu
 ## DNS Server Configurations</br>
 Now we are moving upstream in the DNS validation by analyzing the DNS Server Configurations and then ensuring all devices are available by pinging each one.</br>
 If they are not available we need to then analyze if our DNS Server Configs have changed to start remediation.</br>
-<img width="1207" height="713" alt="image" src="https://github.com/user-attachments/assets/6d760b21-bd0e-4fe9-907d-e0d8d522a842" /></br>
+<img width="1205" height="715" alt="image" src="https://github.com/user-attachments/assets/f8e8c0fb-ec45-4a2a-aa99-fc5eef752bb4" /></br>
 _Here you can see I am documenting in greater detail the various states, workflows, and logic that needs to be managed in order to ensure I catch all edge cases._
 _We already have these workflows and decision trees accounted for in our first deliverable but you can compare this decision tree breakdown with the previous and see how the various loops are now documented._
 
