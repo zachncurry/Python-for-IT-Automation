@@ -268,7 +268,7 @@ While there is more to do on this project I would like to take a moment and docu
 ## DNS Server Configurations</br>
 Now we are moving upstream in the DNS validation by analyzing the DNS Server Configurations and then ensuring all devices are available by pinging each one.</br>
 If they are not available we need to then analyze if our DNS Server Configs have changed to start remediation.</br>
-<img width="678" height="702" alt="image" src="https://github.com/user-attachments/assets/6974a6e3-bdb0-4f83-adae-b17cb6715044" />
+<img width="1142" height="723" alt="image" src="https://github.com/user-attachments/assets/b7d466e0-cf88-4139-a1d0-224db285f043" /></br>
 
 
 
