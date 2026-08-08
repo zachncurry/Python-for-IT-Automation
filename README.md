@@ -266,6 +266,12 @@ While there is more to do on this project I would like to take a moment and docu
 
 
 ## DNS Server Configurations</br>
+Now we are moving upstream in the DNS validation by analyzing the DNS Server Configurations and then ensuring all devices are available by pinging each one.</br>
+If they are not available we need to then analyze if our DNS Server Configs have changed to start remediation.</br>
+<img width="678" height="702" alt="image" src="https://github.com/user-attachments/assets/6974a6e3-bdb0-4f83-adae-b17cb6715044" />
+
+
+
 Abstract the DNS config records from each server creating a backup (example Google 8.8.8.8)</br>
 Before coding anything I want to make sure I can access these from the Server Command Line and understand what exactly is expected.</br>
 For _meow_ we will use the cat (short for concatenate) function to read the contents of /etc/bind/named.conf.local </br>
@@ -275,8 +281,19 @@ Then we use Netmiko a vendor neutral network automation library to help us conne
 [UnitDNS_dump.py](https://github.com/zachncurry/Rogue-DNS-Server-Detection-and-Remediation/blob/c2a47cc8bf673de843b5feccb2d0ab361f60e60b/unitDNS_dump.py) Unit testing the DNS Configuration dump. </br>
 I did first try the file directly and received guidance to use "resolvectl status" instead. That is the thing with coding... The hardest part is getting started made easier by planning first and then adjusting based on the feedback/errors received.</br>_Just like life!_</br>
 
+## Verify all devices are available by Pinging each one
+We already built this functionality into our script so no new development is required.</br>
+What we will do is now build a new workflow and a new table ping_remediation_table to manage the DNS Config errors.</br>
+<img width="615" height="396" alt="image" src="https://github.com/user-attachments/assets/120119a4-bc71-4b93-be80-1b976d4d2a43" />
+
+## Send Device Unavailable Email
+The requirements are to include each device's information in the Email Subject Line whereas before we included a summary table and sent one email.</br>
+Now we will send multiple emails, one for each device.
+
+
+
+
 ## Next Steps</br>
-2) Separate the PING functionality and if Ping can not be resolved add a Ping Alert Email
 3) Verify the DNS configs for each DNS server and if altered incorrectly send an Alert Email
 4) Add a log file to document system checks, modifications, errors
 5) Add time.sleep function to automatically run every x period
