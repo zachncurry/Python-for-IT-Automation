@@ -293,6 +293,7 @@ Now we will send multiple emails, one for each device.
 
 
 
+
 ## Next Steps</br>
 3) Verify the DNS configs for each DNS server and if altered incorrectly send an Alert Email
 4) Add a log file to document system checks, modifications, errors
