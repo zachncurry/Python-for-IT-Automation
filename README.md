@@ -264,17 +264,15 @@ While there is more to do on this project I would like to take a moment and docu
  - **Planning:** Everything is 20/20 once you have done it... I missed a few edge cases and I now see the gap in my planning. I did not write out the combination of variable states that would be important making my final 48 hours focused on bug hunting. If I would have documented all combinations such as: Pass Initial Review - Ticket: Open, Failed Review - Ticket: Closed, I would have done better at finding ALL the edge cases to ensure it is bullet proof. My planning was focused mostly on workflow and I anticipated many of the states but missed the smaller edge cases causing the delay.
  - **Centralized Decision Function:** Currently the logic is spread across a few functions which is not ideal for anyone trying to advance this code base and potentially if I had done better planning I may have been able to unify the logic into a singular function.
 
-
-## DNS Server Configurations</br>
-Now we are moving upstream in the DNS validation by analyzing the DNS Server Configurations and then ensuring all devices are available by pinging each one.</br>
+## Part Two Planning Process</br>
+Now we are moving upstream in the DNS validation by analyzing the DNS Server Configurations and then ensuring all devices are available by pinging each one.
 If they are not available we need to then analyze if our DNS Server Configs have changed to start remediation.</br>
 <img width="1201" height="708" alt="image" src="https://github.com/user-attachments/assets/1a6888ad-266b-452a-a1f9-e0dcb94b2e0e" /></br>
-_Here you can see I am documenting in greater detail the various states, workflows, and logic that needs to be managed in order to ensure I catch all edge cases._</br>
+_Here you can see I am documenting in greater detail the various states, workflows, and logic that needs to be managed in order to ensure I catch all edge cases._
 _We already have these workflows and decision trees accounted for in our first deliverable but you can compare this decision tree breakdown with the previous and see how the various loops are now documented._</br>
 
 
-
-
+## DNS Server Configurations</br>
 Abstract the DNS config records from each server creating a backup (example Google 8.8.8.8)</br>
 Before coding anything I want to make sure I can access these from the Server Command Line and understand what exactly is expected.</br>
 For _meow_ we will use the cat (short for concatenate) function to read the contents of /etc/bind/named.conf.local </br>
